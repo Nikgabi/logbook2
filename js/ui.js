@@ -4,7 +4,10 @@ import {getCurrentUser} from "./auth.js";
 
 export function clearForm(){
 
- document.getElementById("title").value="";
+ //document.getElementById("title").value="";
+ document
+.getElementById("formCard")
+.reset();
 
 }
 

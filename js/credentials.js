@@ -61,6 +61,7 @@ alert("Η καταχώρηση αποθηκεύτηκε");
 
 clearForm();
 
+
 loadCredentials();
 
 }
@@ -90,7 +91,7 @@ return;
 	let html = "";
 
 	credentials
-	.reverse()
+	//.reverse()
 	.forEach(item => {
 
 	const combined = `
