@@ -18,7 +18,7 @@ db.version(4).stores({
    "++id, uid, title, startDate",
 
    publications:
-   "++id, uid, journal, year",
+   "++id, uid, paper, authors, publicationType , notes_publ",
 
    trainings:
    "++id, uid, title, startDate"

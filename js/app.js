@@ -30,6 +30,8 @@ import {db} from "./db.js";
 
 import {saveJob , loadJobs } from "./jobs.js";
 
+import {savePublications , loadPublications, deletePublications, openPublic_Attachment } from "./publications.js";
+
 
 initAuth(async user => {
 
@@ -39,11 +41,22 @@ initAuth(async user => {
      .getElementById("formCard")
      .style.display =
        user ? "block" : "none";
+	   
+	document
+     .getElementById("formPublications")
+     .style.display =
+       user ? "block" : "none";
+
+	document
+     .getElementById("jobForm")
+     .style.display =
+       user ? "block" : "none";	
 
    if(user){
 
       await loadCredentials();
 	  await loadJobs();	
+	  await loadPublications();
    } 
 });
 
@@ -66,6 +79,10 @@ document
 document
 .getElementById("saveJobBtn")
 .addEventListener("click", saveJob );
+
+document
+.getElementById("savePublications")
+.addEventListener("click", savePublications );
 
 const currentJob =
 document.getElementById("currentJob");

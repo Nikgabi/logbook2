@@ -4,13 +4,15 @@ import { getCurrentUser } from "./auth.js";
 
 export async function saveJob(){
 
-   console.log("SAVE JOB START");
+   
+    const user = getCurrentUser();
+	  
+	  if(!user){
 
-   try{
+		alert("Πρέπει να συνδεθείτε");
 
-      const user = getCurrentUser();
-
-      console.log("USER", user);
+		return;
+		}
 
       const fileInput =
          document.getElementById("jobAttachment");
@@ -54,14 +56,7 @@ export async function saveJob(){
 	  alert("Η προϋπηρεσία αποθηκεύτηκε");
       console.log("ADD OK");
 
-      await loadJobs();
-
-   }
-   catch(error){
-
-      console.error(error);
-
-   }
+      await loadJobs(); 
 
 }
 
@@ -127,7 +122,12 @@ export async function loadJobs(){
 
    const user = getCurrentUser();
 
-   if(!user) return;
+   if(!user){
+		document.getElementById("jobsList")
+		.innerHTML = "";
+
+		return;
+	}
 
    const jobs =
       await db.jobs
