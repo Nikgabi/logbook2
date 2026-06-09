@@ -141,7 +141,7 @@ return;
 <div>
 
 <button
-onclick="openPublic_Αttachment(${item.id})"
+onclick="openPublic_Attachment(${item.id})"
 class="btn btn-sm btn-success mb-2">
 Άνοιγμα Αρχείου Δημοσίευσης
 </button>
