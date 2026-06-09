@@ -55,7 +55,10 @@ export async function saveJob(){
       });
 	  alert("Η προϋπηρεσία αποθηκεύτηκε");
       console.log("ADD OK");
-
+	  
+	  clearForm();
+	  
+	
       await loadJobs(); 
 
 }
