@@ -133,10 +133,13 @@ return;
 
 <div>
 
-    <b>Ημερομηνία δημοσίευσης:</b>
-    ${item.public_Date || "-"}
-
-</div>
+    <b>Ημερομηνία δημοσίευσης ? `
+	<div>
+	<b>:</b>
+	${item.public_Date}
+	</div>
+	` : ""}
+	</div>
 
 
 <div>
