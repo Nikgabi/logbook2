@@ -98,7 +98,7 @@ return;
 	${item.paper}
 	${item.authors}
 	${item.publicationType}
-	${item.notes_publ}
+	${item.notesPubl}
 	`
 	.toLowerCase();
 
