@@ -15,18 +15,30 @@ export function clearForm(){
 export function clearForm(){
 
    document.getElementById("credentialType").value = "";
-
    document.getElementById("title").value = "";
-
    document.getElementById("issuer").value = "";
-
    document.getElementById("issueDate").value = "";
-
    document.getElementById("expirationDate").value = "";
-
    document.getElementById("notes").value = "";
-
    document.getElementById("attachment").value = "";
+   
+   document.getElementById("jobStartDate").value = "";
+   document.getElementById("jobEndDate").value = "";
+   document.getElementById("organizationType").value = "";
+   document.getElementById("organizationName").value = "";
+   document.getElementById("department").value = "";
+   document.getElementById("jobGrade").value = "";
+   document.getElementById("jobAttachment").value = "";
+   
+   document.getElementById("publicationType").value = "";
+   document.getElementById("titlePub").value = "";
+   document.getElementById("paper").value = "";
+   document.getElementById("authors").value = "";
+   document.getElementById("firstDate").value = "";
+   document.getElementById("public_Date").value = "";
+   document.getElementById("Public_attachment").value = "";
+   
+   
 
 }
 
