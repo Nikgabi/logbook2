@@ -1,6 +1,12 @@
 import { db } from "./db.js";
 import { getCurrentUser } from "./auth.js";
 
+import {
+	showUser,
+	clearForm	
+
+} from "./ui.js";
+
 
 export async function saveJob(){
 
