@@ -45,7 +45,7 @@ document.getElementById("authors").value,
 firstDate:
 document.getElementById("firstDate").value,
 
-publicationDate:
+public_Date:
 document.getElementById("public_Date").value,
 
 notesPubl:
@@ -141,7 +141,7 @@ return;
 <div>
 
 <button
-onclick="openΑttachment(${item.id})"
+onclick="openPublic_Αttachment(${item.id})"
 class="btn btn-sm btn-success mb-2">
 Άνοιγμα Αρχείου Δημοσίευσης
 </button>
@@ -208,14 +208,14 @@ export async function openPublic_Attachment(id){
 	const item =
 	await db.publications.get(id);
 
-	if(!item.Public_attachment){
+	if(!item.attachment){
 
 	alert("Δεν υπάρχει αρχείο");
 	return;
 
 	}
 
-	const url = URL.createObjectURL(item.Public_attachment);
+	const url = URL.createObjectURL(item.attachment);
 
 	window.open(url);
 	
